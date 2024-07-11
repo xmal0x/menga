@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useRef} from 'react';
 import './App.css';
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import family from './assets/monkeyFamily.png';
 
 function App() {
+    const scrollRef = useRef<HTMLImageElement>(null);
+
+    const handleScrollDown = () => {
+        const scrollElement = scrollRef.current;
+        if (!scrollElement) return
+        window.scrollTo({
+            behavior: 'smooth',
+            top: scrollElement.offsetTop
+        });
+    };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <div className="hero-bg">
+            <Header handleScroll={handleScrollDown}/>
+            <Hero />
+        </div>
+
+        <div className="family">
+            <img ref={scrollRef} src={family} alt="family"/>
+        </div>
     </div>
   );
 }
