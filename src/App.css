@@ -1,10 +1,14 @@
+.container {
+    overflow-x: hidden;
+}
+
 .hero-bg {
     background-image: url("assets/hero.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 1690px;
+    height: 1590px;
 }
 
 .header {
@@ -53,11 +57,13 @@
     }
 
     .monkey {
+        max-width: 400px;
     }
 
     .monkey-hands {
-        margin-top: -255px;
+        margin-top: -267px;
         z-index: 100;
+        max-width: 400px;
     }
 
     .leaf-bg {
@@ -66,6 +72,7 @@
 
     .leaf {
         margin-top: -655px;
+        max-width: 1390px;
     }
 
     .our-partners {

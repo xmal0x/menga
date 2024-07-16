@@ -17,14 +17,14 @@ function App() {
     };
 
   return (
-    <div>
+    <div className="container">
         <div className="hero-bg">
             <Header handleScroll={handleScrollDown}/>
             <Hero />
         </div>
 
         <div className="family">
-            <img ref={scrollRef} src={family} alt="family"/>
+            <img ref={scrollRef} src={family} alt="family" style={{maxWidth: '744px'}}/>
         </div>
     </div>
   );

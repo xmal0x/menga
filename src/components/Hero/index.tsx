@@ -29,9 +29,9 @@ const PartnersContent = () => (
     <div className="our-partners">
         <p>OUR PARTNERS</p>
         <div className="partners-icons">
-            <img src={okx} alt="okx"/>
-            <img src={bybit} alt="bybit"/>
-            <img src={raydium} alt="raydium"/>
+            <img src={okx} alt="okx" style={{maxWidth: '140px'}}/>
+            <img src={bybit} alt="bybit" style={{maxWidth: '150px'}} />
+            <img src={raydium} alt="raydium"  style={{maxWidth: '170px'}}/>
         </div>
     </div>
 )
@@ -44,7 +44,7 @@ const Hero = () => {
 
     return (
         <div className="hero">
-            <img src={logo} alt="logo" className="logo"/>
+            <img src={logo} alt="logo" className="logo" style={{maxWidth: '960px'}}/>
             <TextContent />
             <Button onClick={handleClick} text="JOIN COMMUNITY"/>
             <MonkeyContent />
